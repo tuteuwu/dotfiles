@@ -1,0 +1,15 @@
+* {
+
+background: #282A36;
+backgroundTrans: #282A36A0;
+foreground: #F8F8F2;
+primary: #BD93F9;
+
+red: #FF5555;
+
+bordersWidth: 2px;
+bordersRadius: 16px;
+font: '0xProtoM Nerd Font Mono 16';
+padding: 1 4;
+
+}

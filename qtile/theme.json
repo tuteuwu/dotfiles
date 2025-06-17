@@ -1,0 +1,37 @@
+{
+  "base16":{
+    "color0": "#282A36",
+    "color8": "#F8F8F2",
+    
+    "color1": "#FF5555",
+    "color9": "#FF5555",
+
+    "color2": "#50FA7B",
+    "color10": "#50FA7B",
+    
+    "color3": "#8BE9FD",
+    "color11": "#8BE9FD",
+
+    "color4": "#FFB86C",
+    "color12": "#FFB86C",
+
+    "color5": "#FF79C6",
+    "color13": "#FF79C6",
+
+    "color6": "#F1FA8C",
+    "color14": "#F1FA8C",
+
+    "color7": "#BD93F9",
+    "color15": "#BD93F9"
+  },
+
+  "ui":{
+    "borders_width": 2,
+    "borders_radius": 8,
+    "margin": 16,
+    "transparency": 0.75,
+    "font": "0xProtoM Nerd Font Mono",
+    "font_size": 12,
+    "padding": 4
+  }
+}
