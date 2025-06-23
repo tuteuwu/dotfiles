@@ -9,7 +9,7 @@ configuration {
 #window {
     width:512px;
     background-color: @backgroundTrans;
-    border:           @bordersWidth;
+    border:           0;
     border-radius:    @bordersRadius;
     border-color:     @primary;
     padding:          @padding;
@@ -34,15 +34,14 @@ configuration {
     spacing:      2px ;
     scrollbar:    false;
     padding:      @padding;
+    background-color: @Trans;
 }
 #element {
-    border:  @bordersWidth;
+    border:  0;
     border-radius: @bordersRadius;
-    border-color: @primary;
-    padding: @padding;
 }
 #element.normal.normal {
-    background-color: @background;
+    background-color: @Trans;
     text-color:       @foreground;
 }
 #element.normal.urgent {
@@ -55,7 +54,7 @@ configuration {
 }
 #element.selected.normal {
     background-color: @primary;
-    text-color:       @foreground;
+    text-color:       @background;
 }
 #element.selected.urgent {
     background-color: @red;
@@ -66,7 +65,7 @@ configuration {
     text-color:       @background;
 }
 #element.alternate.normal {
-    background-color: @background;
+    background-color: @Trans;
     text-color:       @foreground;
 }
 #element.alternate.urgent {

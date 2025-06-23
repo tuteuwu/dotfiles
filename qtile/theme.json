@@ -1,36 +1,29 @@
 {
   "base16":{
-    "color0": "#282A36",
-    "color8": "#F8F8F2",
-    
-    "color1": "#FF5555",
-    "color9": "#FF5555",
-
-    "color2": "#50FA7B",
-    "color10": "#50FA7B",
-    
-    "color3": "#8BE9FD",
-    "color11": "#8BE9FD",
-
-    "color4": "#FFB86C",
-    "color12": "#FFB86C",
-
-    "color5": "#FF79C6",
-    "color13": "#FF79C6",
-
-    "color6": "#F1FA8C",
-    "color14": "#F1FA8C",
-
-    "color7": "#BD93F9",
-    "color15": "#BD93F9"
+    "color00": "#11111B",
+    "color01": "#1E1E2E",
+    "color02": "#313244",
+    "color03": "#6C7086",
+    "color04": "#A6AFC8",
+    "color05": "#F5C2E7",
+    "color06": "#CDD6F4",
+    "color07": "#B4BEFE",
+    "color08": "#89B4FA",
+    "color09": "#94E2D5",
+    "color10": "#A6E3A1",
+    "color11": "#F9E2AF",
+    "color12": "#FAB387",
+    "color13": "#F38BA8",
+    "color14": "#CBA6F7",
+    "color15": "#F5C2E7"
   },
 
   "ui":{
     "borders_width": 2,
     "borders_radius": 8,
-    "margin": 16,
+    "margin": 8,
     "transparency": 0.75,
-    "font": "0xProtoM Nerd Font Mono",
+    "font": "0xProto Nerd Font Mono",
     "font_size": 12,
     "padding": 4
   }
