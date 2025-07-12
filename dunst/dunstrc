@@ -1,0 +1,10 @@
+[global]
+width = 512
+height = (0, 512)
+origin = bottom-right
+offset = (8, 8)
+font = 0xProto Nerd Font Mono 12
+corner-radius = 8
+background = "#28282880"
+foreground = "#EBDBB2"    
+frame_color = "#458588"

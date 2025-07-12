@@ -1,0 +1,41 @@
+[window]
+opacity = 0.5
+
+[font]
+size = 12
+
+[font.normal]
+family = "0xProto Nerd Font Mono"
+style = "Regular"
+
+[colors]
+cursor = { text = "#1D2021", cursor = "#FBF1C7" }
+vi_mode_cursor = { text = "#1D2021", cursor = "#FBF1C7" }
+
+[colors.primary]
+foreground = "#EBDBB2"
+background = "#282828"
+
+[colors.search]
+matches = { foreground = "#EBDBB2", background = "#282828"}
+focused_match = { foreground = "#1D2021", background = "#458588"}
+
+[colors.normal]
+black = "#282828"
+red = "#CC241D"
+green = "#98971A"
+yellow = "#D79921"
+blue = "#458588"
+magenta = "#B16286"
+cyan = "#689D6A"
+white = "#EBDBB2"
+
+[colors.bright]
+black = "#121212"
+red = "#CC241D"
+green = "#98971A"
+yellow = "#D79921"
+blue = "#458588"
+magenta = "#B16286"
+cyan = "#689D6A"
+white = "#F2F2F2"

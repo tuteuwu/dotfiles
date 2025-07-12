@@ -1,0 +1,111 @@
+configuration {
+    show-icons:      true;
+    display-drun:    "";
+    disable-history: false;
+}
+
+@import "theme.rasi"
+
+#window {
+    width:512px;
+    background-color: @backgroundTrans;
+    border:           0;
+    border-radius:    @bordersRadius;
+    border-color:     @primary;
+    padding:          @padding;
+}
+#mainbox {
+    border:  0;
+    padding: @padding;
+}
+#message {
+    border:       0px;
+    border-color: @primary;
+    padding:      @padding;
+}
+#textbox {
+    text-color: @foreground;
+}
+#listview {
+    fixed-height: 0;
+    border:       0px;
+    border-radius: @bordersRadius;
+    border-color: @primary;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      @padding;
+    background-color: @Trans;
+}
+#element {
+    border:  0;
+    border-radius: @bordersRadius;
+}
+#element.normal.normal {
+    background-color: @Trans;
+    text-color:       @foreground;
+}
+#element.normal.urgent {
+    background-color: @red;
+    text-color:       @foreground;
+}
+#element.normal.active {
+    background-color: @primary;
+    text-color:       @background;
+}
+#element.selected.normal {
+    background-color: @primary;
+    text-color:       @background;
+}
+#element.selected.urgent {
+    background-color: @red;
+    text-color:       @foreground;
+}
+#element.selected.active {
+    background-color: @primary;
+    text-color:       @background;
+}
+#element.alternate.normal {
+    background-color: @Trans;
+    text-color:       @foreground;
+}
+#element.alternate.urgent {
+    background-color: @red;
+    text-color:       @foreground;
+}
+#element.alternate.active {
+    background-color: @primary;
+    text-color:       @foreground;
+}
+#scrollbar {
+    width:        2px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @primary;
+}
+#button.selected {
+    background-color: @primary;
+    text-color:       @foreground;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+#entry {
+    text-align: center;
+    margin: 8;
+    spacing:    0;
+    text-color: @primary;
+}
+#inputbar {
+    children:   [ entry,case-indicator ];
+}
+

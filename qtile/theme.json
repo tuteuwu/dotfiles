@@ -1,0 +1,30 @@
+{
+  "base16":{
+    "base-bg": "#282828",
+    "light-bg": "#504945",
+    "dark-bg": "#1D2021",
+    "base-fg": "#EBDBB2",
+    "light-fg": "#FBF1C7",
+    "dark-fg": "#a89984",
+    "red": "#CC241D",
+    "green": "#98971A",
+    "yellow": "#D79921",
+    "blue": "#458588",
+    "purple": "#b16286",
+    "aqua": "#689D6A",
+    "gray": "#7C6F64",
+    "orange": "#D65D0E",
+    "black": "#121212",
+    "white": "#F2F2F2"
+  },
+
+  "ui":{
+    "borders_width": 2,
+    "borders_radius": 8,
+    "margin": 8,
+    "transparency": 0.75,
+    "font": "0xProto Nerd Font Mono",
+    "font_size": 12,
+    "padding": 4
+  }
+}
