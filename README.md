@@ -9,7 +9,7 @@ These are my personal dotfiles for a customized Arch Linux setup.
 - **Fish** shell with a custom prompt
 - **Picom** (fork: `picom-ft-udev`) animations are goat
 - **Neofetch** for system info display
-- **Dunst** as notifications deamon
+- **Dunst** as notifications daemon
 - **cava** for display audio on terminal
   
 - **Fonts used**:
