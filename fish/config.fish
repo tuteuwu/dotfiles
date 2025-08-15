@@ -1,9 +1,12 @@
 fish_config theme choose "my"
 
+alias randomWallpaper "feh --bg-scale ( $HOME/.config/fish/scripts/getRandomFile.sh ~/Pictures/wallpapers/gruvbox )"
+alias clearDownloads "$HOME/.config/fish/scripts/clearDownloads.sh"
+alias neofetch "neofetch --ascii_colors 1 2 3 4 5"
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
     set fish_greeting
-    neofetch --config ~/.config/neofetch/configShort.conf --ascii_colors 4 5
+
+    
 end
 

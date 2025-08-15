@@ -3,38 +3,25 @@ function fish_prompt
     set last_status $status
     set path (shorten_path (pwd | string replace $HOME '~'))
 
-    set bg "#282828"
-    set blue "#458588"
-    set purple "#B16286"
-    set aqua "#689D6A"
-    set red "#CC241D"
+    set bg "#A89984"
+    set fg "#1D2021"
 
-    set blueFG (set_color $blue --background normal)
-    set aquaFG (set_color $aqua --background normal)
-    set redFG (set_color $red --background normal)
-
-    set blueBG (set_color $bg --background $blue)
-    set purpleBG (set_color $bg --background $purple)
-    set aquaBG (set_color $bg --background $aqua)
-    set redBG (set_color $bg --background $red)
-
-    set blueToPurple (set_color $blue --background $purple)
-    set purpleToAqua (set_color $purple --background $aqua)
-    set purpleToRed (set_color $purple --background $red)
+    set colorFG (set_color $bg --background normal)
+    set colorBG (set_color $fg --background $bg)
 
     set resetColor (set_color normal --background normal)
 
 
-    echo -n $blueFG"╭"$blueBG" "$USER $blueToPurple""
+    echo -n $colorFG"╭"$colorBG" "$USER "│"
 
     if test $last_status -ne 0
-    echo -n $purpleBG"  "$path $purpleToRed""
-    echo $redBG" 󰞌 "$CMD_DURATION$redFG""
+    echo -n $colorBG"  "$path  "│"
+    echo $colorBG" 󰞌 "$CMD_DURATION$colorFG""
     else
-    echo -n $purpleBG"  "$path $purpleToAqua""
-    echo $aquaBG" 󰞌 "$CMD_DURATION$aquaFG""
+    echo -n $colorBG"  "$path  "│"
+    echo $colorBG" 󰞌 "$CMD_DURATION$colorFG""
     end
-    echo $blueFG"╰  > "$resetColor
+    echo $colorFG"╰  > "$resetColor
 
 end
 

@@ -5,7 +5,7 @@ from libqtile.config import Click, Drag, Key
 mod = "mod4"
 alt = "mod1"
 
-ter = "alacritty"
+ter = "kitty"
 
 keys = [
 

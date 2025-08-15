@@ -23,7 +23,7 @@ def autostart():
 
     processes = [ 
             ['picom'],
-            ['discord']
+            ['vesktop']
         ]
     for p in processes:
         subprocess.Popen(p)

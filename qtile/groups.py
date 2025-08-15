@@ -14,7 +14,7 @@ group = {
     3: Group("3"),
     4: Group("4", matches=[Match(wm_class=re.compile(r"^(code)$"))]),
     8: Group("8", matches=[Match(wm_class=re.compile(r"^(steam)$"))]),
-    9: Group("9", matches=[Match(wm_class=re.compile(r"^(discord)$"))]),
+    9: Group("9", matches=[Match(wm_class=re.compile(r"^(vesktop)$"))]),
     0: Group("0"),
 }
 

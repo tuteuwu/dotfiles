@@ -3,14 +3,14 @@
 background: #282828;
 backgroundTrans: #28282880;
 foreground: #EBDBB2;
-primary: #458588;
+primary: #458588C0;
 Trans: #12121200;
 
 red: #CC241D;
 
 bordersWidth: 2px;
 bordersRadius: 8px;
-font: '0xProto Nerd Font Mono 12';
+font: '0xProto Nerd Font Mono 16';
 padding: 1 4;
 
 }
