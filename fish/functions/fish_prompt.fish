@@ -12,16 +12,16 @@ function fish_prompt
     set resetColor (set_color normal --background normal)
 
 
-    echo -n $colorFG"╭"$colorBG" "$USER "│"
+    echo -n $colorFG"╔"$colorBG"   "$USER ""
 
     if test $last_status -ne 0
-    echo -n $colorBG"  "$path  "│"
-    echo $colorBG" 󰞌 "$CMD_DURATION$colorFG""
+    echo -n $colorBG"  "$path  ""
+    echo $colorBG" 󰞌 "$CMD_DURATION $colorFG""
     else
-    echo -n $colorBG"  "$path  "│"
-    echo $colorBG" 󰞌 "$CMD_DURATION$colorFG""
+    echo -n $colorBG"  "$path  ""
+    echo $colorBG" 󰞌 "$CMD_DURATION $colorFG""
     end
-    echo $colorFG"╰  > "$resetColor
+    echo $colorFG"╚═ "$resetColor
 
 end
 
