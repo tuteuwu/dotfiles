@@ -1,5 +1,4 @@
-
-from libqtile.config import Group, Key, Match, Screen
+from libqtile.config import Group, Key, Match
 from libqtile.lazy import lazy
 from keys import keys
 import re
@@ -8,20 +7,18 @@ import re
 mod = "mod4"
 alt = "mod1"
 
-group = {
-    1: Group("1"),
-    2: Group("2"),
-    3: Group("3"),
-    4: Group("4", matches=[Match(wm_class=re.compile(r"^(code)$"))]),
-    8: Group("8", matches=[Match(wm_class=re.compile(r"^(steam)$"))]),
-    9: Group("9", matches=[Match(wm_class=re.compile(r"^(vesktop)$"))]),
-    0: Group("0"),
-}
+for vt in range(1, 8):
+    keys.append(
+        Key(
+            ["control", "mod1"],
+            f"f{vt}",
+            lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
+            desc=f"Switch to VT{vt}",
+        )
+    )
 
-groups = list(group.values())
 
-def getGroupKey(name):
-    return [k for k, g in group.items() if g.name == name] [0]
+groups = [Group(i) for i in "123456789"]
 
 for i in groups:
     keys.extend(
@@ -29,23 +26,23 @@ for i in groups:
             # mod + group number = switch to group
             Key(
                 [mod],
-                str(getGroupKey(i.name)),
+                i.name,
                 lazy.group[i.name].toscreen(),
                 desc=f"Switch to group {i.name}",
             ),
             # mod + shift + group number = switch to & move focused window to group
             Key(
                 [mod, "shift"],
-                str(getGroupKey(i.name)),
+                i.name,
                 lazy.window.togroup(i.name, switch_group=True),
                 desc=f"Switch to & move focused window to group {i.name}",
             ),
-            # mod + alt + group number = switch focused window to group
+            # mod + alt + group number = move focused window to group
             Key(
                 [mod, alt],
-                str(getGroupKey(i.name)),
+                i.name,
                 lazy.window.togroup(i.name),
-                desc=f"move focused window to group {i.name}"
-            ),
+                desc="move focused window to group {i.name}"),
         ]
     )
+
