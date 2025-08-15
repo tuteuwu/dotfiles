@@ -66,9 +66,9 @@ screens = [
                     rules=[
                         GroupBoxRule(text_colour = colors["black"]).when(occupied=False),
                         GroupBoxRule(text_colour = colors["blue"]).when(GroupBoxRule.SCREEN_ANY),
-                        GroupBoxRule(text="").when(GroupBoxRule.SCREEN_THIS),
-                        GroupBoxRule(text="").when(occupied=True),
-                        GroupBoxRule(text="").when(occupied=False),
+                        GroupBoxRule(text="").when(GroupBoxRule.SCREEN_THIS),
+                        GroupBoxRule(text="").when(occupied=True),
+                        GroupBoxRule(text="").when(occupied=False),
                     ]
                 ),
                 widget.Spacer(),
@@ -85,5 +85,5 @@ screens = [
             background = "#28282880",
         ),
         x11_drag_polling_rate = 60
-    )
+    ),
 ]
