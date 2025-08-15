@@ -7,17 +7,6 @@ import re
 mod = "mod4"
 alt = "mod1"
 
-for vt in range(1, 8):
-    keys.append(
-        Key(
-            ["control", "mod1"],
-            f"f{vt}",
-            lazy.core.change_vt(vt).when(func=lambda: qtile.core.name == "wayland"),
-            desc=f"Switch to VT{vt}",
-        )
-    )
-
-
 groups = [Group(i) for i in "123456789"]
 
 for i in groups:
