@@ -1,9 +1,9 @@
 from libqtile import hook
 
-from keys import keys, mouse    # Keybinds
+from binds import keys, mouse    # Keybinds
 from groups import groups       # Groups
-from layouts import layouts     # Layouts
-from screens import screens     # Screens
+from layouts import layouts, floating_layout    # Layouts
+from screens import extension_defaults, screens     # Screens
 import os, subprocess
 
 dgroups_key_binder = None

@@ -1,6 +1,6 @@
-from qtile_extras import layout
-from qtile_extras.layout.decorations import GradientFrame
 from libqtile.config import Match
+from qtile_extras import layout
+from qtile_extras.layout.decorations import GradientBorder
 import json, os
 
 # Theme
@@ -12,42 +12,28 @@ colors = theme['base16']
 ui = theme['ui']
 
 layouts = [
-    layout.MonadTall(
+    layout.Plasma(
         border_normal=colors["dark-bg"],
-        border_focus=colors["light-bg"],
+        border_normal_fixed=colors["dark-bg"],
+        border_focus=GradientBorder(colours=[colors["blue"], colors["purple"]]),
+        border_focus_fixed=GradientBorder(colours=[colors["blue"], colors["purple"]]),
         border_width=ui["borders_width"],
-        single_border_width=ui["borders_width"],
+        border_width_single=ui["borders_width"],
         margin=ui["margin"],
-        ),
-    layout.MonadWide(
+        fair=True
+    ),
+    layout.Max(
         border_normal=colors["dark-bg"],
-        border_focus=colors["light-bg"],
+        border_focus=GradientBorder(colours=[colors["blue"], colors["purple"]]),
         border_width=ui["borders_width"],
-        single_border_width=ui["borders_width"],
         margin=ui["margin"],
-        ),
-    layout.MonadTall(
-        align=1,
-        border_normal=colors["dark-bg"],
-        border_focus=colors["light-bg"],
-        border_width=ui["borders_width"],
-        single_border_width=ui["borders_width"],
-        margin=ui["margin"],
-        ),
-    layout.MonadWide(
-        align=1,
-        border_normal=colors["dark-bg"],
-        border_focus=colors["light-bg"],
-        border_width=ui["borders_width"],
-        single_border_width=ui["borders_width"],
-        margin=ui["margin"],
-        ),
+    )
 ]
 
 floating_layout = layout.Floating(
     border_normal=colors["dark-bg"],
-    border_focus=colors["light-bg"],
-    
+    border_focus=GradientBorder(colours=[colors["blue"], colors["purple"]]),
+    border_width=ui["borders_width"],
 
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.

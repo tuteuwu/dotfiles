@@ -21,7 +21,7 @@
   "ui":{
     "borders_width": 2,
     "borders_radius": 8,
-    "margin": 8,
+    "margin": 4,
     "transparency": 0.75,
     "font": "0xProto Nerd Font Mono",
     "font_size": 12,
