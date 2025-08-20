@@ -21,52 +21,59 @@ widget_defaults = dict(
 )
 extension_defaults = widget_defaults.copy()
 
-screens = [
-    #First screen
-    Screen(
-        top=bar.Bar(
-            [
-                widget.Spacer(2),
-                widget.GroupBox2(
-                    font = "Symbols Nerd Font Mono",
-                    rules=[
-                        GroupBoxRule(text_colour = colors["black"]).when(occupied=False),
-                        GroupBoxRule(text_colour = colors["blue"]).when(GroupBoxRule.SCREEN_ANY),
-                        GroupBoxRule(text_colour = colors["base-fg"]).when(occupied=True),
-                        GroupBoxRule(text="").when(GroupBoxRule.SCREEN_THIS),
-                        GroupBoxRule(text="").when(occupied=True),
-                        GroupBoxRule(text="").when(occupied=False),
-                    ]
-                ),
-                widget.Spacer(32),
-                widget.GlobalMenu(),
-                widget.Spacer(),
-                widget.Clock(
-                    format="%H:%M",
-                    fontsize = 16,
-                    foreground = colors["base-fg"]
-                ),
-                widget.Spacer(),
-                
-                widget.Systray(),
-                widget.UPowerWidget(
-                    background = colors["dark-bg"],
-                    border_charge_colour = colors["aqua"],
-                    border_colour = colors["base-fg"],
-                    border_critical_colour = colors["red"],
-                    fill_charge = colors["base-fg"],
-                    fill_critical = colors["base-fg"],
-                    fill_low = colors["base-fg"],
-                    fill_normal = colors["base-fg"],
+def make_screen(include_systray=False):
+    widgets = [
+        widget.Spacer(2),
+        widget.GroupBox2(
+            font="Symbols Nerd Font Mono",
+            rules=[
+                GroupBoxRule(text_colour = colors["black"]).when(occupied=False),
+                GroupBoxRule(text_colour = colors["blue"]).when(GroupBoxRule.SCREEN_ANY),
+                GroupBoxRule(text_colour = colors["base-fg"]).when(occupied=True),
+                GroupBoxRule(text="").when(GroupBoxRule.SCREEN_THIS),
+                GroupBoxRule(text="").when(occupied=True),
+                GroupBoxRule(text="").when(occupied=False),
+            ]
+        ),
+        widget.Spacer(32),
+        widget.GlobalMenu(),
+        widget.Spacer(),
+        widget.Clock(
+            format="%H:%M",
+            fontsize=16,
+            foreground=colors["base-fg"],
+        ),
+        widget.Spacer(),
+    ]
 
-                ),
-                widget.Spacer(2)
-            ],
+    # add Systray only if requested
+    if include_systray:
+        widgets.append(widget.Systray())
+
+    # continue with other widgets
+    widgets.extend([
+        widget.UPowerWidget(
+            background=colors["dark-bg"],
+            border_charge_colour=colors["aqua"],
+            border_colour=colors["base-fg"],
+            border_critical_colour=colors["red"],
+            fill_charge=colors["base-fg"],
+            fill_critical=colors["base-fg"],
+            fill_low=colors["base-fg"],
+            fill_normal=colors["base-fg"],
+        ),
+        widget.Spacer(2),
+    ])
+
+    return Screen(
+        top=bar.Bar(
+            widgets,
             32,
             margin=ui["margin"],
             opacity=1.0,
-            background = "#28282880",
+            background="#28282880",
         ),
-        x11_drag_polling_rate = 60
+        x11_drag_polling_rate=60,
     )
-]
+
+screens = [make_screen(include_systray=True), make_screen(include_systray=False)]

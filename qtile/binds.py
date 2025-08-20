@@ -60,6 +60,28 @@ keys = [
     Key([mod], "9", lazy.group["9"].toscreen()),
     Key([mod], "0", lazy.group["0"].toscreen()),
 
+    Key([mod, "shift"], "1", lazy.window.togroup("1", switch_group=True)),
+    Key([mod, "shift"], "2", lazy.window.togroup("2", switch_group=True)),
+    Key([mod, "shift"], "3", lazy.window.togroup("3", switch_group=True)),
+    Key([mod, "shift"], "4", lazy.window.togroup("4", switch_group=True)),
+    Key([mod, "shift"], "5", lazy.window.togroup("5", switch_group=True)),
+    Key([mod, "shift"], "6", lazy.window.togroup("6", switch_group=True)),
+    Key([mod, "shift"], "7", lazy.window.togroup("7", switch_group=True)),
+    Key([mod, "shift"], "8", lazy.window.togroup("8", switch_group=True)),
+    Key([mod, "shift"], "9", lazy.window.togroup("9", switch_group=True)),
+    Key([mod, "shift"], "0", lazy.window.togroup("0", switch_group=True)),
+
+    Key([mod, alt], "1", lazy.window.togroup("1")),
+    Key([mod, alt], "2", lazy.window.togroup("2")),
+    Key([mod, alt], "3", lazy.window.togroup("3")),
+    Key([mod, alt], "4", lazy.window.togroup("4")),
+    Key([mod, alt], "5", lazy.window.togroup("5")),
+    Key([mod, alt], "6", lazy.window.togroup("6")),
+    Key([mod, alt], "7", lazy.window.togroup("7")),
+    Key([mod, alt], "8", lazy.window.togroup("8")),
+    Key([mod, alt], "9", lazy.window.togroup("9")),
+    Key([mod, alt], "0", lazy.window.togroup("0")),
+
 ]
 
 # Drag floating layouts.
