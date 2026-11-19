@@ -1,0 +1,23 @@
+width  = 25%
+height = 75%
+
+prompt = Type Here! >w<
+
+orientation    = vertical
+content_halign = center
+halign         = center
+valign         = start
+
+show_icons=false
+gtk_dark=true
+allow_images=false
+allow_markup=true
+
+sort_order=alphabetical
+matching=fuzzy
+
+key_expand=Tab
+key_exit=Escape
+filter_rate=100
+close_on_focus_loss=true
+hide_scroll=true
