@@ -1,12 +1,12 @@
-width  = 25%
-height = 75%
+width  = 512px
+height = 768px
 
 prompt = Type Here! >w<
 
 orientation    = vertical
 content_halign = center
 halign         = center
-valign         = start
+valign         = center
 
 show_icons=false
 gtk_dark=true

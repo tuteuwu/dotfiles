@@ -1,65 +1,111 @@
-/* Catppuccin Mocha - Wofi */
+@define-color accent0 #458588;
+@define-color accent1 #B16286;
+
+@define-color base0 #1D2021;
+@define-color base1 #282828;
+@define-color base2 #32302F;
+
+@define-color surface0 #3C3836;
+@define-color surface1 #504945;
+@define-color surface2 #665C54;
+
+@define-color text #EBDBB2;
+
 * {
-  font-size: 16px;
+	font-size: 16px;
+	outline: none;
+	box-shadow: none;
+	border: none;
 }
-#scroll {
-  background-color: #1e1e2e;
+
+#window {
+	background-color: @base0;
+	border: 2px solid @accent0;
+	border-radius: 0px;
 }
+
 #outer-box {
-  background-color: #1e1e2e;
-  padding: 4px;
-  border: 2px solid #cba6f7;
-  border-radius: 4px;
+	padding: 4px;
+	background-color: transparent;
+	border: none;
 }
+
 #main {
-  background-color: #1e1e2e;
+	background-color: @base0;
 }
+
+#input {
+	background-color: @surface0;
+	color: @text;
+	caret-color: @accent0;
+	padding: 4px;
+	margin: 8px;
+	border-radius: 0px;
+}
+
+#input:focus {
+	border-color: @accent0;
+}
+
+#input placeholder {
+	color: @surface2;
+}
+
+#input image {
+	color: @accent0;
+	-gtk-icon-effect: none;
+}
+
+#scroll {
+	background-color: @base0;
+}
+
+#inner-box {
+	background-color: @base0;
+	margin: 2px;
+}
+
 scrollbar,
 scrollbar trough,
 undershoot.top,
 undershoot.bottom {
-  min-width: 4px;
-  min-height: 4px;
-  background: none;
-}
-scrollbar slider{
-  background-color: #cba6f7;
-}
-#outer-box {
-  padding: 4px;
+	min-width: 4px;
+	min-height: 4px;
+	background: none;
 }
 
-#input image {
-  color: #cba6f7; /* Accent */
-  -gtk-icon-effect: none;
+scrollbar slider {
+	background-color: @accent0;
+	border-radius: 2px;
 }
-#input {
-  background-color: #313244; /* Surface0 */
-  color: #cdd6f4;        /* typed text */
-  caret-color: #cba6f7;
-  padding: 4px;
-  margin: 8px;
-  border-radius: 4px;
-}
-#input:focus {
-  border-color: #cba6f7; /* Accent */
-}
-#input placeholder {
-  color: #1e1e2e; /* Overlay0 */
-}
+
 #entry {
-  background-color: #1e1e2e;
-  color: #cdd6f4;
-}
-#entry:selected {
-  background-color: #313244;
-  color: #cba6f7;
-  border-radius: 4px;
-}
-#text {
-  color: #cdd6f4 ; /* Text */
-}
-#text:selected {
-  color: #cba6f7; /* Accent */
+	background-color: @base0;
+	color: @text;
+	padding: 4px 8px;
+	border-radius: 0px;
 }
 
+#entry:selected {
+	background-color: @surface0;
+	color: @accent0;
+}
+
+#text {
+	color: @text;
+}
+
+#text:selected {
+	color: @accent0;
+}
+
+#img {
+	margin-right: 8px;
+}
+
+#expander-box {
+	background-color: @surface0;
+	color: @text;
+	border-radius: 4px;
+	padding: 4px;
+}
